@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tirocinio-deployment
+  #con le stesse etichette collego deployment ai pods
+  labels:
+    app: tirocinio
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tirocinio
+  #to pods
+  template:
+    metadata:
+      labels:
+        app: tirocinio
+    spec:
+      containers:
+      - name: tirocinio
+        image: 23894/tirocinio
+        ports:
+        - containerPort: 8080
+
+
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tirocinio-service
+spec:
+  selector:
+  #stessa label dei metadata del deployment e dei pod per connetterli
+    app: tirocinio
+  #loadBalancerIP: 40.121.183.52
+  type: LoadBalancer
+  #type: NodePort
+  ports:
+  #porta in cui ha accesso il servizio stesso e porta in cui è in ascolto il pod (che corrisponde a quella del container)
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+
