@@ -34,11 +34,15 @@ spec:
   #stessa label dei metadata del deployment e dei pod per connetterli
     app: tirocinio
   #loadBalancerIP: 40.121.183.52
-  type: LoadBalancer
-  #type: NodePort
+  #type: LoadBalancer
+  type: NodePort
   ports:
   #porta in cui ha accesso il servizio stesso e porta in cui è in ascolto il pod (che corrisponde a quella del container)
     - protocol: TCP
-      port: 80
+    #(anche 80) porta di accesso del servizio stesso 
+      port: 8080
+      #porta dove il pod è in ascolto
       targetPort: 8080
+      #porta del nodo su cui kubernetes instrada il traffico
+      nodePort: 30001
 
