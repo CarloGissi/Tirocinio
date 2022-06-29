@@ -18,7 +18,7 @@ import com.google.gson.reflect.TypeToken;
  */
 public class Deserialize{
 	/**
-	 * Metodo che deserializza file contenente dati relativi alle Current Api
+	 * Metodo che deserializza file contenente dati relativi alle Current Api.
 	 * 
 	 * @param cityName nome del file della città da deserializzare
 	 * @return vettore di tipo weather relativo alla città deserializzata
