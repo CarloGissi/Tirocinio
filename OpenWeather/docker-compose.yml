@@ -3,7 +3,6 @@ services:
   Openweather:
     build:
       context: .
-      target: development
     image: 23894/tirocinio
     command: ./mvnw spring-boot:run
     ports:
