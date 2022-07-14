@@ -3,7 +3,7 @@ services:
   Openweather:
     build:
       context: .
-    image: 23894/tirocinio
+    image: 23894/tir
     command: ./mvnw spring-boot:run
     ports:
     - 8080:8080
