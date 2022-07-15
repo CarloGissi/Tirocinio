@@ -1,7 +1,4 @@
 # OpenWeather
-Il progetto sviluppato è relativo all'appello del 25 Gennaio 2021 di Programmazione ad Oggetti e gli autori sono:
-* Carlo Gissi: 50%
-* Andrea Iasenzaniro: 50%
 
 ## Generalità
 Il Web Service da noi implementato è un RESTful web, cioè un sistema che, mediante il protocollo HTTP, è in grado di rispondere alle richieste di un Client, quale Postman o un sito web, ed interagire con gli utenti attraverso delle funzioni e/o rotte prestabilite. 
